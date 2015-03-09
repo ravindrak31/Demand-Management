@@ -1,0 +1,14 @@
+﻿body
+        {
+           
+           background-image:url('../Images/CTS_midpage.jpg');
+           background-size: auto;
+        }
+
+<style>
+        .rowstyle td
+        {
+            width:150px;
+        }
+
+    </style>

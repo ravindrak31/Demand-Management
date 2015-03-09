@@ -1,0 +1,67 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link rel="shortcut icon" href="~/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="~/CSS/Styles.css"/>
+    <title>Demand Management</title>
+    
+    <asp:ContentPlaceHolder id="head" runat="server">
+         
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    
+    <form id="form1" runat="server">
+    <div  >  
+        
+        <br />
+        <a href="Main_Page.aspx">
+        <asp:Image ID="Image1" runat="server" Height="49px" ImageUrl="~/Images/Test_logo.png" Width="198px" />
+        </a>
+        <br />
+        <br />
+        <asp:Menu ID="Menu1" runat="server" BackColor="#D4EBF3" dynamichorizontaloffset="5" dynamicverticaloffset="10" staticdisplaylevels="1" orientation="Horizontal" Font-Names="Calibri Light" Font-Size="Medium" ForeColor="#CC0066" StaticSubMenuIndent="10px">
+            <StaticMenuItemStyle HorizontalPadding="6px" VerticalPadding="2px"/>
+                <DynamicHoverStyle BackColor="#CC3300" ForeColor="#310062" />
+                <DynamicMenuStyle BackColor="#D4EBF3" />
+                <StaticSelectedStyle BackColor="#CC3300" />
+                <DynamicSelectedStyle BackColor="#310062" />
+                <DynamicMenuItemStyle HorizontalPadding="6px" VerticalPadding="4px"/>
+                <StaticHoverStyle ForeColor="White" BackColor="#310062" />
+            <DynamicItemTemplate>
+                <%# Eval("Text") %>
+            </DynamicItemTemplate>
+            <Items>
+                <asp:MenuItem Text="Clients" Value="Clients">
+                    <asp:MenuItem NavigateUrl="~/Default.aspx" Text="New Client Details" ToolTip="New Client Wizard" Value="New Client Details"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Edit_Client.aspx" Text="Edit Client Details" ToolTip="Edit Client Details" Value="Edit Client Details"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/Demand_New.aspx" Text="Demand Opportunity" Value="Demand Opportunity">
+                    <asp:MenuItem NavigateUrl="~/Demand_New.aspx" Text="New Opportunity" ToolTip="New Demand Opportunity" Value="New Demand Opportunity"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Demand_update.aspx" Text="Update Opportunity" ToolTip="Update Demand Opportunity" Value="Update Demand Opportunity">
+                        <asp:MenuItem NavigateUrl="~/Demand_update2.aspx" Text="Update by User" 
+                            Value="Update by User"></asp:MenuItem>
+                    </asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="Reports" Value="Reports">
+                    <asp:MenuItem Text="Graphical Report" Value="Report - Vertical Wise" NavigateUrl="~/Graph_Page1.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Graphical Report" Value="Report - Year Wise" NavigateUrl="~/Graph_Page2.aspx"></asp:MenuItem>
+                </asp:MenuItem>
+            </Items>
+            
+        </asp:Menu>
+        
+        <br />
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+            <p>
+                &nbsp;</p>
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

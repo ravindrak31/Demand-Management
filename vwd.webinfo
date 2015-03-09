@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<!-- 
+  Visual Studio global web project settings.
+-->
+<VisualWebDeveloper>
+
+  <comReferences>
+    <reference Name="interop.msacal" ID="{8E27C92E-1264-101C-8A2F-040224009C02}\7.0\0"/>
+  </comReferences>
+</VisualWebDeveloper>
